@@ -56,7 +56,7 @@ class SingleConnection(protocol.Protocol):
     def dataReceived(self, data):
         if self.factory.isConnected == False:
             pswd = data.decode()
-            if pswd == "Ala-Bala":
+            if pswd == "CAGEDI":
                 self.factory.isConnected = True
                 print(
                     "Connected with ", self.factory.connectiondata, " : ", data.decode()
